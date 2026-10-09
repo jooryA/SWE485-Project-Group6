@@ -1,0 +1,4 @@
+Dataset Name: Retail Intelligence - Customer Churn Dataset
+Source: Kaggle
+URL: https://www.kaggle.com/datasets/noopurbhatt/retail-intelligence-customer-churn-dataset
+Purpose: Customer churn analysis and prediction in the retail domain.
