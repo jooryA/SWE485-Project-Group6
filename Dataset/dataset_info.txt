@@ -1,4 +1,6 @@
 Dataset Name: Retail Intelligence - Customer Churn Dataset
 Source: Kaggle
+Author: Noopur Bhatt
 URL: https://www.kaggle.com/datasets/noopurbhatt/retail-intelligence-customer-churn-dataset
-Purpose: Customer churn analysis and prediction in the retail domain.
+License: MIT (https://www.mit.edu/~amini/LICENSE.md)
+Original purpose: A fully synthetic dataset simulating 100,000 retail customers, covering purchasing activity, engagement signals, loyalty indicators, and churn risk. It was designed for analyzing how customer behavior translates into churn and for building churn-prediction (classification) models, customer segmentation, and retail analytics dashboards. The binary label churn_flag is provided for prediction tasks.
