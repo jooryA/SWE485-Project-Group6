@@ -22,3 +22,9 @@ This plot shows the confusion matrix of the tuned Random Forest model on the tes
 File: rf_roc_curve.png
 
 This plot shows the ROC curve of the tuned Random Forest model on the test dataset. It illustrates the model's ability to distinguish between churned and retained customers across different classification thresholds.
+
+## Random Forest – Feature Importance
+
+File: rf_feature_importance.png
+
+This plot shows the top 15 most important features identified by the Random Forest model for predicting customer churn. It highlights which customer characteristics contribute most to the model’s predictions.
