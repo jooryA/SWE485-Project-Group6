@@ -32,3 +32,31 @@ This project builds an advisory system for a Chief Customer Officer (CCO) that:
 - equips executive teams with GenAI-driven retention intervention strategies through an interactive dashboard.
 
 We selected the **Retail Intelligence: Customer Churn Dataset** (Kaggle, 100,000 customer records, 18 columns) because it combines customer demographics, purchasing behavior, engagement signals, and loyalty indicators with a binary churn label (`churn_flag`), which makes it well suited to classification, customer segmentation, and decision support.
+
+
+## General Information
+
+### Group Work
+
+The project work is distributed among the six team members as follows. Each member is responsible for completing the assigned tasks, documenting the work, and communicating progress to the team.
+
+| Team Member| Responsibilities |
+|---|---|
+| **Danah Alsayari** | Define the problem and domain, select and describe the dataset, explain the project motivation, and document the dataset |
+| **Joory Alharbi** | Perform initial data inspection, conduct Exploratory Data Analysis (EDA), create visualizations, and summarize key insights. |
+| **Lulwah Alqadi** | Develop the preprocessing pipeline, document preprocessing steps and justifications, and prepare the dataset for modeling. |
+| **Madawi Aldayel** | Select the two supervised learning models, compare their performance, analyze the results, justify the best model, and document next steps for Phase 2. |
+| **Raghad Alabrah** | Implement and train Model 1, tune hyperparameters, and evaluate its performance using metrics and visualizations. |
+| **Latifah Almarshad** | Implement and train Model 2, tune hyperparameters, and evaluate its performance using metrics and visualizations. |
+
+
+
+### AI Tools Usage and Acknowledgment
+
+AI-assisted tools were used as supplementary resources during the project to support the team's learning, documentation, and problem-solving process.
+
+The tools were used for the following purposes, where applicable:
+
+- **Documentation and Writing:** Improving the clarity, grammar, and organization of project documentation.
+- **Code Debugging:** Assisting with investigating errors.
+
