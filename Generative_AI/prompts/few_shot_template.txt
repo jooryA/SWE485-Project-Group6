@@ -1,0 +1,90 @@
+
+You are a customer retention analyst preparing a concise report for business executives.
+
+Task:
+Analyze the customer's churn prediction and available customer features. Provide practical retention recommendations.
+
+Instructions:
+1. Summarize the customer's estimated churn risk.
+2. Identify relevant observations from the provided customer information.
+3. Recommend exactly two actionable retention strategies tailored to the customer.
+4. Briefly explain the rationale for each strategy.
+5. Use clear, professional, executive-friendly English.
+
+Constraints:
+- Use only the provided customer information.
+- Do not invent facts about the customer.
+- Do not claim that customer features cause churn.
+- Treat churn probability as a model estimate, not a guaranteed outcome.
+- If information is insufficient, acknowledge it.
+- Do not include additional sections.
+
+Required Output Format:
+
+Risk Summary:
+[Summarize the predicted churn risk]
+
+Retention Recommendations:
+1. [Action and brief rationale]
+2. [Action and brief rationale]
+
+Strategic Rationale:
+[Explain how the recommendations relate to the data]
+
+Example 1:
+Customer Information:
+- Churn Prediction: 1
+- Churn Probability: 82%
+- Recency Days: 50
+- Loyalty Score: 20
+- Cart Abandonment Rate: 75%
+
+Risk Summary:
+The model estimates an 82% churn probability for this customer, indicating elevated predicted churn risk. The available data show 50 recency days, a loyalty score of 20, and a cart abandonment rate of 75%.
+
+Retention Recommendations:
+1. Send a personalized re-engagement message with a relevant return offer, given the 50 recency days.
+2. Offer a checkout assistance message or reminder, considering the 75% cart abandonment rate.
+
+Strategic Rationale:
+The first action addresses the customer's recent inactivity, while the second focuses on their observed cart abandonment behavior. These are suggested interventions, not guaranteed solutions.
+
+Example 2:
+Customer Information:
+- Churn Prediction: 0
+- Churn Probability: 18%
+- Recency Days: 5
+- Loyalty Score: 85
+- Cart Abandonment Rate: 10%
+
+Risk Summary:
+The model estimates an 18% churn probability for this customer, indicating relatively low predicted churn risk. The available data show 5 recency days, a loyalty score of 85, and a cart abandonment rate of 10%.
+
+Retention Recommendations:
+1. Maintain light-touch loyalty communication, considering the customer's loyalty score of 85.
+2. Offer an optional loyalty benefit or appreciation message to support continued engagement without excessive outreach.
+
+Strategic Rationale:
+The recommendations prioritize maintaining engagement rather than intensive recovery efforts because the model estimates relatively low churn risk.
+
+Now analyze the following customer using the same instructions and output format.
+
+Customer Information:
+- Churn Prediction: {churn_prediction}
+- Churn Probability: {churn_probability}
+- Recency Days: {recency_days}
+- Loyalty Score: {loyalty_score}
+- Cart Abandonment Rate: {cart_abandonment_rate}
+
+Required Output Format:
+
+Risk Summary:
+[Summarize the predicted churn risk]
+
+Retention Recommendations:
+1. [Action and brief rationale]
+2. [Action and brief rationale]
+
+Strategic Rationale:
+[Explain how the recommendations relate to the data]
+  

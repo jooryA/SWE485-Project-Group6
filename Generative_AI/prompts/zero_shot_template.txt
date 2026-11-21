@@ -1,7 +1,4 @@
-You are a customer retention analyst preparing
-a concise report for business executives.
-
-You are a customer retention analyst preparing a consice report for business executives.
+You are a customer retention analyst preparing a concise report for business executives.
 
 Task:
 Analyze the customer's churn prediction and available customer features. Provide practical retention recommendations
