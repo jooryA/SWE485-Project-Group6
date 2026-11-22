@@ -1,0 +1,38 @@
+[
+    {
+        "test_case": "TC01",
+        "customer_data": {
+            "churn_prediction": 1,
+            "churn_probability": "87%",
+            "recency_days": 45,
+            "loyalty_score": 25,
+            "cart_abandonment_rate": "70%"
+        },
+        "zero_shot_report": "Risk Summary:\nThe predictive model estimates an 87% probability of churn (Churn Prediction: 1), indicating a high risk of customer loss.\n\nRetention Recommendations:\n1. Deploy a targeted cart recovery campaign to address the 70% cart abandonment rate, paired with an incentive to encourage purchase completion.\n2. Engage the customer through a loyalty program initiative to improve their current loyalty score of 25.\n\nStrategic Rationale:\nThese recommendations directly address the customer's observed high cart abandonment rate and low loyalty score. Because information is limited to these specific behavioral features, targeted interventions in these areas are relevant ways to re-engage the customer without assuming direct causation of churn.",
+        "few_shot_report": "Risk Summary:\nThe model estimates an 87% churn probability for this customer, indicating elevated predicted churn risk. The available data show 45 recency days, a loyalty score of 25, and a cart abandonment rate of 70%.\n\nRetention Recommendations:\n1. Send a targeted re-engagement communication with a compelling return incentive, given the 45 recency days.\n2. Provide a personalized checkout assistance or reminder incentive, considering the 70% cart abandonment rate.\n\nStrategic Rationale:\nThe first action addresses the customer's recent period of inactivity, while the second targets their high rate of abandoned carts. These are suggested interventions, not guaranteed solutions."
+    },
+    {
+        "test_case": "TC02",
+        "customer_data": {
+            "churn_prediction": 1,
+            "churn_probability": "55%",
+            "recency_days": 20,
+            "loyalty_score": 55,
+            "cart_abandonment_rate": "45%"
+        },
+        "zero_shot_report": "Risk Summary:\nThe predictive model estimates a 55% probability of churn (classification: 1), indicating a moderate-to-high risk that this customer may disengage.\n\nRetention Recommendations:\n1. Targeted Cart Recovery Campaign: Send personalized reminders or incentives addressing the customer's 45% cart abandonment rate to encourage purchase completion.\n2. Loyalty Program Engagement: Leverage the customer's current loyalty score of 55 by offering tailored rewards or communication to reinforce ongoing engagement within 20 days of their last activity.\n\nStrategic Rationale:\nThese actions are relevant because they directly address the observed behavioral metrics—specifically the cart abandonment rate and the loyalty score—while accounting for the moderate churn probability. Since causation cannot be assumed from these features, these targeted strategies aim to re-engage the customer without relying on unverified assumptions about their underlying motivations.",
+        "few_shot_report": "Risk Summary:\nThe model estimates a 55% churn probability for this customer, indicating moderate predicted churn risk. The available data show 20 recency days, a loyalty score of 55, and a cart abandonment rate of 45%.\n\nRetention Recommendations:\n1. Provide a targeted incentive to complete pending purchases, given the 45% cart abandonment rate.\n2. Engage the customer with loyalty program updates or perks, considering the loyalty score of 55.\n\nStrategic Rationale:\nThe first action addresses the customer's observed cart abandonment behavior, while the second leverages their moderate loyalty score to reinforce ongoing engagement. These are suggested interventions, not guaranteed solutions."
+    },
+    {
+        "test_case": "TC03",
+        "customer_data": {
+            "churn_prediction": 0,
+            "churn_probability": "12%",
+            "recency_days": 5,
+            "loyalty_score": 90,
+            "cart_abandonment_rate": "10%"
+        },
+        "zero_shot_report": "Risk Summary:\nThe model estimates a low churn risk, with a predicted churn probability of 12% and a churn prediction of 0.\n\nRetention Recommendations:\n1. Maintain regular engagement through existing communication channels, supported by a recent activity timestamp of 5 days.\n2. Leverage the high loyalty score of 90 by inviting the customer to an exclusive loyalty tier or rewards program.\n\nStrategic Rationale:\nThese recommendations capitalize on the customer's demonstrated high engagement and strong loyalty score. Maintaining standard touchpoints and recognizing their high loyalty status are proactive measures that align with their current observed behavior.",
+        "few_shot_report": "Risk Summary:\nThe model estimates a 12% churn probability for this customer, indicating relatively low predicted churn risk. The available data show 5 recency days, a loyalty score of 90, and a cart abandonment rate of 10%.\n\nRetention Recommendations:\n1. Maintain standard, light-touch communication, considering the customer's high loyalty score of 90 and low recency of 5 days.\n2. Provide a periodic appreciation message or subtle loyalty perks to acknowledge their strong engagement, considering their 10% cart abandonment rate.\n\nStrategic Rationale:\nThe recommendations focus on sustaining the customer's positive engagement rather than implementing aggressive intervention, as the model estimates a low churn probability."
+    }
+]
