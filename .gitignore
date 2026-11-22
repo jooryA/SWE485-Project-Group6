@@ -13,3 +13,4 @@ __pycache__/
 
 # Jupyter temporary files
 .ipynb_checkpoints/
+Unsupervised_Learning/outputs/gmm_customer_segments.csv

@@ -1,0 +1,62 @@
+K-MEANS SEGMENTS (k = 3)
+Silhouette: 0.099 | Davies-Bouldin: 2.448 | WCSS: 1,091,475
+
+Average feature values per segment:
+kmeans_segment         High-Volume Buyers  Low-Engagement Customers  Engaged Light Buyers
+purchase_frequency                  24.36                      3.98                  4.38
+avg_order_value                    234.65                    192.88                196.26
+total_spent                       5527.68                    688.48                774.38
+recency_days                       182.03                    184.26                182.05
+website_visits                     122.97                     18.38                 20.37
+discount_usage_rate                  0.43                      0.42                  0.43
+email_open_rate                      0.47                      0.31                  0.65
+cart_abandonment_rate                0.46                      0.57                  0.32
+loyalty_score                       54.72                     54.50                 54.60
+engagement_score                    50.61                     36.78                 66.63
+
+Customers and churn rate per segment:
+                          customers  churned  churn_rate
+kmeans_segment                                          
+High-Volume Buyers            37796    16637       44.02
+Low-Engagement Customers      31485    17036       54.11
+Engaged Light Buyers          30719    12551       40.86
+
+
+GMM SEGMENTS (k = 4)
+Silhouette: 0.008 | Davies-Bouldin: 18.561
+
+Average feature values per segment:
+persona                One-time Buyers  Occasional Buyers  Regular Buyers  Heavy Users
+purchase_frequency            1.000000           2.450603        8.239802    32.026116
+avg_order_value             209.491748         210.083024      205.975731   215.241640
+total_spent                 215.090140         527.537656     1714.193051  6999.171275
+recency_days                183.905016         182.797514      182.374171   182.560380
+website_visits                4.489570          11.731244       40.744738   159.639049
+discount_usage_rate           0.427022           0.425371        0.425456     0.427772
+email_open_rate               0.475245           0.473253        0.473983     0.476034
+cart_abandonment_rate         0.454853           0.449797        0.450568     0.450363
+loyalty_score                54.771620          54.400345       54.583416    54.768098
+engagement_score             51.019611          51.172775       51.170789    51.283570
+size_%                       14.813000          22.046000       38.290000    24.851000
+
+Customers and churn rate per segment:
+                   customers  churn_rate   High    Low  Medium
+persona                                                       
+One-time Buyers        14813       0.486  0.346  0.378   0.276
+Occasional Buyers      22046       0.478  0.343  0.383   0.274
+Regular Buyers         38290       0.468  0.328  0.397   0.275
+Heavy Users            24851       0.426  0.288  0.438   0.274
+
+
+INTERPRETATION
+
+K-Means (main segmentation)
+- High-Volume Buyers (37.8%): buy often and spend the most. Churn rate 44.0%. Protect them with loyalty rewards.
+- Low-Engagement Customers (31.5%): few emails opened, many abandoned carts. Churn rate 54.1%, the highest. First priority for re-engagement.
+- Engaged Light Buyers (30.7%): buy little but respond to emails. Churn rate 40.9%, the lowest. Offer recommendations to raise order size.
+
+GMM (supporting segmentation)
+- Four purchase tiers: One-time, Occasional, Regular and Heavy Users. Churn rates are 48.6%, 47.8%, 46.8% and 42.6%.
+- Membership probabilities flag customers whose tier is uncertain (1.08% have confidence below 80%).
+
+Overall: the overall churn rate is 46.2%. Neither algorithm finds sharply separated groups, so segments are used as context for the Phase 1 churn predictions, not as predictions themselves.
