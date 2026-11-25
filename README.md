@@ -60,3 +60,80 @@ The tools were used for the following purposes, where applicable:
 - **Documentation and Writing:** Improving the clarity, grammar, and organization of project documentation.
 - **Code Debugging:** Assisting with investigating errors.
 
+## Executive Decision-Making Interface & Dashboard
+
+The project includes an interactive executive dashboard that integrates customer churn predictions, customer segmentation, and GenAI-supported retention insights to support customer retention decisions.
+
+- **Live Dashboard:** [https://ui-p2iak52wy-danah7.vercel.app/](https://ui-p2iak52wy-danah7.vercel.app/)
+- **UI Repository:** [https://github.com/DanahAlsayari/ui](https://github.com/DanahAlsayari/ui)
+
+### Dashboard Features
+
+- **Overview Dashboard:** Presents executive KPI summaries, including the overall churn rate, number of churned customers, the customer segment with the highest churn rate, and key driver charts.
+  
+  ![Overview Dashboard Screenshot](ui_screenshots/overview-dashboard.png)
+
+- **Churn Prediction:** Uses the Phase 1 baseline Logistic Regression model to predict customer churn and display the churn probability and prediction confidence.
+
+  ![Churn Prediction Screenshot](ui_screenshots/churn-prediction.png)
+
+- **Customer Segmentation:** Uses the Phase 2 K-Means model to identify customer segments, visualize their profiles, and present recommended retention actions.
+
+  ![Customer Segmentation Screenshot](ui_screenshots/customer-segmentation.png)
+
+- **GenAI Retention Insights:** Generates a risk summary, actionable retention recommendations, and a strategic rationale based on prediction results and selected customer attributes.
+
+  ![GenAI Retention Insights Screenshot](ui_screenshots/genai-retention-insights.png)
+
+### Visual Analytics Integration
+
+The dashboard incorporates interactive visual analytics components to help users explore customer behavior, interpret model predictions, and understand key business performance indicators.
+
+- **Scenario Sliders:** Allow users to adjust customer input values and explore how different inputs affect the prediction results.
+  
+  ![Scenario Sliders Screenshot](ui_screenshots/scenario-sliders.png)
+
+- **Confidence Metrics:** Display the prediction confidence alongside the churn probability to help users interpret the model's output.
+
+  ![Confidence Metrics Screenshot](ui_screenshots/confidence-metrics.png)
+
+- **KPI Summaries:** Present key business indicators, including the overall churn rate, number of churned customers, and highest-risk customer segment.
+
+  ![KPI Summaries Screenshot](ui_screenshots/overview-dashboard.png)
+
+### Setup and Execution
+
+The project provides two options for accessing and running the dashboard:
+
+**Option 1: Access the Live Dashboard**
+
+You can access the deployed application directly through this link ([https://ui-p2iak52wy-danah7.vercel.app/](https://ui-p2iak52wy-danah7.vercel.app/)) without downloading or installing the project locally.
+
+**Option 2: Download and Run Locally**
+
+You can download or clone the project repository and run the application in your local development environment. The repository includes the project source code and backend requirements needed for local setup.
+
+For local execution, you need to configure the required environment variables and install the frontend and backend dependencies before starting the respective services. Additional setup instructions are provided below.
+
+#### Local Setup Instructions
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/DanahAlsayari/ui.git
+   cd ui
+   ```
+
+2. **Start the Backend:**
+   ```bash
+   cd backend
+   pip install -r requirements.txt
+   uvicorn main:app --reload
+   ```
+
+3. **Start the Frontend:** Open a new terminal in the project root and run:
+   ```bash
+   npm install
+   npm run dev
+   ```
+
+4. **Add the .env File:** Place the `.env` file we sent you inside the `backend` folder in the cloned repository.
