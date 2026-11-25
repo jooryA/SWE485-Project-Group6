@@ -1,35 +1,56 @@
-
 You are a customer retention analyst preparing a concise report for business executives.
 
 Task:
-Analyze the customer's churn prediction and available customer features. Provide practical retention recommendations.
+Analyze the customer's churn prediction, churn probability, individual customer features, and customer segmentation information. Provide practical and personalized retention recommendations.
+
+Customer Information:
+- Churn Prediction: {churn_prediction}
+- Churn Probability: {churn_probability}
+- Recency Days: {recency_days}
+- Loyalty Score: {loyalty_score}
+- Cart Abandonment Rate: {cart_abandonment_rate}
+- K-Means Behavioral Segment: {kmeans_persona}
+- GMM Purchase tier: {gmm_persona}
+- GMM Membership Confidence: {gmm_confidence}
+
 
 Instructions:
 1. Summarize the customer's estimated churn risk.
-2. Identify relevant observations from the provided customer information.
-3. Recommend exactly two actionable retention strategies tailored to the customer.
-4. Briefly explain the rationale for each strategy.
-5. Use clear, professional, executive-friendly English.
+2. Identify relevant observations from the provided individual customer features.
+3. Use the K-Means behavioral segment to understand the customer's behavioral patterns.
+4. Use the GMM purchase tier to personalize retention recommendations according to the customer's purchasing patterns.
+5. Consider the GMM membership confidence when interpreting the purchase tier. If the confidence is low, rely more on individual customer features.
+6. Recommend exactly two actionable retention strategies tailored to the customer.
+7. Briefly explain the rationale for each strategy.
+8. Use clear, professional, executive-friendly English.
+
 
 Constraints:
-- Use only the provided customer information.
-- Do not invent facts about the customer.
-- Do not claim that customer features cause churn.
-- Treat churn probability as a model estimate, not a guaranteed outcome.
-- If information is insufficient, acknowledge it.
-- Do not include additional sections.
+- Use only the information provided.
+- Do not invent customer details or business facts.
+- Do not assume that observed features or customer segments cause churn.
+- Treat churn probability as a model estimate, not a certainty.
+- Use customer segments as supporting context rather than direct churn predictions.
+- Do not assume that all segment characteristics apply to every individual customer.
+- Do not interpret GMM membership confidence as churn probability or K-Means membership confidence.
+- Avoid unsupported guarantees about outcomes.
+- If information is missing or uncertain, state the relevant limitation.
+- Do not include extra sections.
+
 
 Required Output Format:
 
 Risk Summary:
-[Summarize the predicted churn risk]
+[Concise summary of the predicted churn risk and relevant customer characteristics]
 
 Retention Recommendations:
-1. [Action and brief rationale]
-2. [Action and brief rationale]
+1. [Action and short rationale]
+2. [Action and short rationale]
 
 Strategic Rationale:
-[Explain how the recommendations relate to the data]
+[Brief explanation of how the recommended actions align with the customer's risk level, individual features, and available segmentation information]
+
+
 
 Example 1:
 Customer Information:
@@ -38,16 +59,24 @@ Customer Information:
 - Recency Days: 50
 - Loyalty Score: 20
 - Cart Abandonment Rate: 75%
+- K-Means Behavioral Segment: Low-Engagement Customers
+- GMM Purchase Tier: Occasional Buyers
+- GMM Membership Confidence: 95%
 
 Risk Summary:
-The model estimates an 82% churn probability for this customer, indicating elevated predicted churn risk. The available data show 50 recency days, a loyalty score of 20, and a cart abandonment rate of 75%.
+The model estimates an 82% churn probability, indicating elevated predicted churn risk. The customer has 50 recency days, a loyalty score of 20, and a cart abandonment rate of 75%.
+ The K-Means behavioral segment and GMM purchase tier provide additional context for personalizing retention efforts.
+
 
 Retention Recommendations:
-1. Send a personalized re-engagement message with a relevant return offer, given the 50 recency days.
-2. Offer a checkout assistance message or reminder, considering the 75% cart abandonment rate.
+Send a personalized re-engagement message with a relevant return offer, considering the customer's recency days, loyalty score, and occasional purchasing pattern.
+Provide a checkout reminder or offer checkout assistance, considering the customer's 75% cart abandonment rate.
+
 
 Strategic Rationale:
-The first action addresses the customer's recent inactivity, while the second focuses on their observed cart abandonment behavior. These are suggested interventions, not guaranteed solutions.
+The recommendations combine re-engagement and checkout support based on the customer's individual features and segmentation information. 
+The high GMM membership confidence supports using the purchase tier as additional context. These suggested interventions do not guarantee retention.
+
 
 Example 2:
 Customer Information:
@@ -56,18 +85,26 @@ Customer Information:
 - Recency Days: 5
 - Loyalty Score: 85
 - Cart Abandonment Rate: 10%
+- K-Means Behavioral Segment: Engaged Light Buyers
+- GMM Purchase Tier: Regular Buyers
+- GMM Membership Confidence: 45%
 
 Risk Summary:
-The model estimates an 18% churn probability for this customer, indicating relatively low predicted churn risk. The available data show 5 recency days, a loyalty score of 85, and a cart abandonment rate of 10%.
+The model estimates an 18% churn probability, indicating relatively low predicted churn risk. The customer has 5 recency days, a loyalty score of 85, and a cart abandonment rate of 10%. The K-Means segment provides additional behavioral context, while the GMM membership confidence of 45% indicates uncertainty in the assigned purchase tier.
 
 Retention Recommendations:
-1. Maintain light-touch loyalty communication, considering the customer's loyalty score of 85.
-2. Offer an optional loyalty benefit or appreciation message to support continued engagement without excessive outreach.
+
+Maintain light-touch loyalty communication and provide relevant loyalty benefits, considering the customer's loyalty score of 85.
+
+Send an optional personalized product discovery message to encourage continued engagement, considering the customer's recent purchasing activity and K-Means behavioral segment.
 
 Strategic Rationale:
-The recommendations prioritize maintaining engagement rather than intensive recovery efforts because the model estimates relatively low churn risk.
+The recommendations prioritize maintaining customer engagement rather than intensive recovery efforts. Given the uncertainty in the GMM purchase tier, the recommendations rely primarily on individual customer features, with the K-Means behavioral segment serving as supporting context.
 
-Now analyze the following customer using the same instructions and output format.
+
+
+
+Now analyze the following customer using the same instructions, constraints, and required output format.
 
 Customer Information:
 - Churn Prediction: {churn_prediction}
@@ -75,16 +112,6 @@ Customer Information:
 - Recency Days: {recency_days}
 - Loyalty Score: {loyalty_score}
 - Cart Abandonment Rate: {cart_abandonment_rate}
-
-Required Output Format:
-
-Risk Summary:
-[Summarize the predicted churn risk]
-
-Retention Recommendations:
-1. [Action and brief rationale]
-2. [Action and brief rationale]
-
-Strategic Rationale:
-[Explain how the recommendations relate to the data]
-  
+- K-Means Behavioral Segment: {kmeans_persona}
+- GMM Purchase Tier: {gmm_persona}
+- GMM Membership Confidence: {gmm_confidence}
