@@ -1,0 +1,42 @@
+[
+    {
+        "Test Case": "TC01",
+        "First Evaluation": "Zero-Shot",
+        "Second Evaluation": "Zero-Shot",
+        "Final Preference": "Zero-Shot",
+        "First Justification": "Report A provides a slightly more structured and cohesive strategic rationale, explicitly connecting the K-Means 'Low-Engagement' and GMM 'One-time Buyer' segments to actionable retention steps while maintaining accurate factual alignment with the customer's data.",
+        "Second Justification": "Report B offers superior readability, slightly better integration of the customer's specific metrics into actionable recommendations, and clearly distinguishes between behavioral segments and tactical next steps. The structuring of the retention recommendations in Report B is more practical for execution by a retail marketing team."
+    },
+    {
+        "Test Case": "TC02",
+        "First Evaluation": "Zero-Shot",
+        "Second Evaluation": "Zero-Shot",
+        "Final Preference": "Zero-Shot",
+        "First Justification": "Report A provides a more structured, readable, and detailed analysis. It explicitly separates the rationale for each retention recommendation, effectively synthesizes the customer's high-volume and heavy-user persona with their loyalty score, and translates the metrics into a cohesive, actionable strategy better suited for executive decision-making.",
+        "Second Justification": "Report B is better structured for executive decision-making. It explicitly integrates the rationale directly into each retention recommendation, making the actionable steps clearer and more practical. Furthermore, it rounds the statistical percentages to a more readable format (99.82%) without losing critical meaning, enhancing overall clarity."
+    },
+    {
+        "Test Case": "TC03",
+        "First Evaluation": "Few-Shot",
+        "Second Evaluation": "Zero-Shot",
+        "Final Preference": "Unstable",
+        "First Justification": "Report B provides a slightly more refined and practical approach for a low-risk, engaged customer. Instead of pushing aggressive personalized product recommendations based solely on tier classifications like Report A, Report B sensibly suggests maintaining standard loyalty communications and reinforcing existing rewards, which aligns better with the customer's strong loyalty score and very low churn probability.",
+        "Second Justification": "Report B provides slightly more actionable and personalized recommendations, such as introducing personalized product recommendations based on the customer's tier, whereas Report A relies heavily on maintaining standard communications."
+    },
+    {
+        "Test Case": "TC04",
+        "First Evaluation": "Zero-Shot",
+        "Second Evaluation": "Few-Shot",
+        "Final Preference": "Unstable",
+        "First Justification": "Report A provides a more structured and actionable approach to the retention recommendations, directly tying the high loyalty score and cart abandonment rate to specific campaign concepts. It also integrates the GMM confidence nuance more effectively into the strategic rationale for decision-making.",
+        "Second Justification": "Report A provides a slightly more cohesive alignment between the behavioral personas and the retention strategies, effectively leveraging the high loyalty score to counteract the 219 days of inactivity. Its strategic rationale clearly articulates why individual features are emphasized due to the moderate GMM confidence, making it the preferred operational guide for a retail executive."
+    },
+    {
+        "Test Case": "TC05",
+        "First Evaluation": "Zero-Shot",
+        "Second Evaluation": "Zero-Shot",
+        "Final Preference": "Zero-Shot",
+        "First Justification": "Report A provides superior detail and completeness, specifically connecting the 210-day gap and 20.00% cart abandonment rate directly into the retention recommendations. It frames the actionable strategies more thoroughly for a retail executive than the slightly more generic points in Report B.",
+        "Second Justification": "Report B provides a more structured and actionable breakdown of the recommendations, explicitly connecting the cart abandonment rate and the 210-day gap to specific campaign types (re-engagement email and incentivized second-purchase promotion), making it slightly more practical for immediate execution by the marketing team."
+    }
+]
